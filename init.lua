@@ -7,12 +7,10 @@ require("key.setup")
 
 -- UI
 require("ui.theme")
-require("ui.lsp")
 require("ui.terminal")
 
 -- LSP
 require("lsp.setup")
-require("lsp.completion")
 
 require("plugin.setup")
 require("plugin.lualine")

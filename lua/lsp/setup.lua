@@ -6,5 +6,8 @@ end
 
 lsp_installer.setup({})
 require("lsp.null-ls")
+require("lsp.completion")
+require("lsp.ui")
+
 require("lsp.lua").setup()
 require("lsp.rust").setup()
