@@ -62,6 +62,12 @@ return require('packer').startup(function(use)
     "tami5/lspsaga.nvim"
   }
 
+  -- 格式化
+  use {
+    "jose-elias-alvarez/null-ls.nvim",
+    requires = "nvim-lua/plenary.nvim",
+  }
+
   -- 补全
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'

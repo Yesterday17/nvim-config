@@ -7,4 +7,6 @@ sudo pacman -S fd
 sudo pacman -S ripgrep
 
 # :checkhealth telescope
+
+sudo pacman -S shfmt stylua
 ```
