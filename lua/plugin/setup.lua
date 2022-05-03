@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
 
   -- 主题
   use 'folke/tokyonight.nvim'
+  use 'lukas-reineke/indent-blankline.nvim'
 
   -- 文件树
   use {
