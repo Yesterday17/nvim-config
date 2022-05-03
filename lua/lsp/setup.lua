@@ -9,5 +9,5 @@ require("lsp.null-ls")
 require("lsp.completion")
 require("lsp.ui")
 
-require("lsp.lua").setup()
-require("lsp.rust").setup()
+require("lsp.languages.lua").setup()
+require("lsp.languages.rust").setup()
