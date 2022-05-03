@@ -1,0 +1,5 @@
+vim.api.nvim_exec([[ autocmd InsertEnter * :silent !fcitx5-remote -o ]], false)
+vim.api.nvim_exec([[ autocmd InsertLeave * :silent !fcitx5-remote -c ]], false)
+vim.api.nvim_exec([[ autocmd BufCreate *  :silent !fcitx5-remote -c ]], false)
+vim.api.nvim_exec([[ autocmd BufEnter *  :silent !fcitx5-remote -c ]], false)
+vim.api.nvim_exec([[ autocmd BufLeave *  :silent !fcitx5-remote -c ]], false)
