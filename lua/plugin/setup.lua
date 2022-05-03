@@ -59,6 +59,7 @@ return require('packer').startup(function(use)
   use {
     "williamboman/nvim-lsp-installer",
     "neovim/nvim-lspconfig",
+    "tami5/lspsaga.nvim"
   }
 
   -- 补全

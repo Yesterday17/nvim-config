@@ -15,7 +15,7 @@ nvim_tree.setup({
   open_on_setup = true,
   update_focused_file = {
       enable = true,
-      update_cwd = true,
+      update_cwd = false,
   },
   -- 隐藏 .文件 和 node_modules 文件夹
   filters = {

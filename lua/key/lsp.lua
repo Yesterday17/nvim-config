@@ -1,18 +1,19 @@
 local function map_keys(mapbuf)
   -- rename
-  mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
+  mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>")
   -- code action
-  mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+  mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>")
   -- go xx
-  mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
-  mapbuf("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>")
+  -- mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
+  mapbuf("n", "gd", "<cmd>Lspsaga preview_definition<CR>")
+  mapbuf("n", "gh", "<cmd>Lspsaga hover_doc<CR>")
   mapbuf("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
   mapbuf("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
-  mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
+  mapbuf("n", "gr", "<cmd>Lspsaga lsp_finder<CR>")
   -- diagnostic
-  mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>")
-  mapbuf("n", "gk", "<cmd>lua vim.diagnostic.goto_prev()<CR>")
-  mapbuf("n", "gj", "<cmd>lua vim.diagnostic.goto_next()<CR>")
+  mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>")
+  mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+  mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<CR>")
   mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>")
   -- 没用到
   -- mapbuf('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opt)
