@@ -1,4 +1,4 @@
-local map = require('../utils/keymap').map
+local map = require("../utils/keymap").map
 
 -- 取消 s 默认功能
 map("n", "s", "")
