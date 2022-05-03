@@ -7,5 +7,8 @@ return {
     map("n", "<leader>bl", ":BufferLineCloseRight<CR>")
     map("n", "<leader>bh", ":BufferLineCloseLeft<CR>")
     map("n", "<leader>bc", ":BufferLinePickClose<CR>")
+
+    map("n", "<leader>h", ":bp<CR>")
+    map("n", "<leader>l", ":bn<CR>")
   end
 }
