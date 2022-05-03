@@ -3,7 +3,7 @@ pcall(
   [[
     augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd BufWritePost setup.lua source <afile> | PackerSync
     augroup end
   ]]
 )
@@ -33,6 +33,9 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
+
+  -- 终端
+  use 'caenrique/nvim-toggle-terminal'
 
   -- Git
   use {

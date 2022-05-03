@@ -5,13 +5,14 @@ if not status then
 end
 
 local tree_keys = require("key.plugin.tree")
-tree_keys.setup {}
+tree_keys.setup()
 
 nvim_tree.setup({
   git = {
-    enable = false
+    enable = true,
   },
-  update_cwd = true,
+  update_cwd = false,
+  open_on_setup = true,
   update_focused_file = {
       enable = true,
       update_cwd = true,
