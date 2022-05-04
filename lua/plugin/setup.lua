@@ -24,9 +24,8 @@ return require("packer").startup(function(use)
 
 	-- 顶部 Tab
 	use({
-		"akinsho/bufferline.nvim",
-		tag = "v2.*",
-		requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" },
+		"romgrk/barbar.nvim",
+		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
 	-- 底部提示栏
@@ -34,6 +33,27 @@ return require("packer").startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
+	-- use({
+	-- 	"gelguy/wilder.nvim",
+	-- 	config = function()
+	-- 		local wilder = require("wilder")
+	-- 		wilder.setup({ modes = { ":", "/", "?" } })
+	-- 		wilder.set_option("pipeline", {
+	-- 			wilder.branch(wilder.cmdline_pipeline(), wilder.search_pipeline()),
+	-- 		})
+	-- 		wilder.set_option(
+	-- 			"renderer",
+	-- 			wilder.popupmenu_renderer(wilder.popupmenu_border_theme({
+	-- 				highlights = {
+	-- 					border = "Normal", -- highlight to use for the border
+	-- 				},
+	-- 				-- 'single', 'double', 'rounded' or 'solid'
+	-- 				-- can also be a list of 8 characters, see :h wilder#popupmenu_border_theme() for more details
+	-- 				border = "rounded",
+	-- 			}))
+	-- 		)
+	-- 	end,
+	-- })
 
 	-- 终端
 	use("caenrique/nvim-toggle-terminal")
