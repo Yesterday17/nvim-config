@@ -1,7 +1,7 @@
 return {
 	setup = function()
 		local map = require("utils.keymap").map
-		map("n", "<A-m>", ":NvimTreeToggle<CR>")
+		map("n", "<leader>b", ":NvimTreeToggle<CR>")
 	end,
 
 	mapping_list = {

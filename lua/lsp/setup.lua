@@ -11,3 +11,4 @@ require("lsp.ui")
 
 require("lsp.languages.lua").setup()
 require("lsp.languages.rust").setup()
+require("lsp.languages.typescript").setup()
