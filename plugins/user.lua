@@ -6,7 +6,7 @@ return {
 
     solarized:setup {
       theme = "neovim",
-      transparent = true,
+      transparent = vim.t.is_transparent == 1,
     }
 
     if vim.g.neovide and vim.t.is_transparent == 1 then
