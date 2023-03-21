@@ -1,35 +1,37 @@
+vim.t.is_transparent = 1
+
 if vim.g.neovide then
-  vim.o.guifont = "JetBrains_Mono:h16"
+  vim.o.guifont = "JetBrains_Mono:h17"
   vim.g.neovide_scale_factor = 1
 
   -- animations
   vim.g.neovide_cursor_animation_length = 0 -- disable cursor animation
   vim.g.neovide_scroll_animation_length = 0.01
 
-  -- Helper function for transparency formatting
-  local alpha = function()
-    return string.format("%x", math.floor(255 * vim.g.transparency or 0.8))
+  if vim.t.is_transparent == 1 then
+    -- Helper function for transparency formatting
+    -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
+    vim.g.transparency = 0.85
+    vim.g.neovide_transparency = 0.0
+
+    vim.g.neovide_floating_blur_amount_x = 2.0
+    vim.g.neovide_floating_blur_amount_y = 2.0
   end
-  -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
-  vim.g.neovide_transparency = 0.0
-  vim.g.transparency = 0.8
-  vim.g.neovide_background_color = "#002b36" .. alpha() -- "#0f1117" .. alpha()
 
   -- fps
-  -- vim.g.neovide_refresh_rate = 120
+  vim.g.neovide_no_idle = true
+  vim.g.neovide_refresh_rate = 60
   -- vim.g.neovide_refresh_rate_idle = 30
-  -- vim.g.neovide_no_idle = true
 
   vim.g.neovide_confirm_quit = true
-  -- vim.g.neovide_fullscreen = true
   vim.g.neovide_remember_window_size = true
   vim.g.neovide_remember_window_position = true
+  -- vim.g.neovide_fullscreen = true
 
   -- disable special character inputed by alt+key
-  -- vim.g.neovide_input_macos_alt_is_meta = false
+  vim.g.neovide_input_macos_alt_is_meta = true
 end
 
--- vim.t.is_transparent = 1
 return {
   updater = {
     channel = "stable",
@@ -38,9 +40,9 @@ return {
     pin_plugins = nil,
     --
     -- [Changelog related]
-    skip_prompts = false,  -- skip promits about breaking changes
+    skip_prompts = false, -- skip promits about breaking changes
     show_changelog = true, -- show the changelog after performing an update
-    auto_quit = false,     -- automatically quit the current session after a successful update
+    auto_quit = false, -- automatically quit the current session after a successful update
     -- [Nightly feature]
     branch = "nightly",
     commit = nil,
@@ -48,7 +50,7 @@ return {
     remote = "origin",
     remotes = {
       -- ["remote_name"] = "github_user/repo"
-    }
+    },
   },
   colorscheme = "solarized",
 }
