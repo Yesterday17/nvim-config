@@ -4,7 +4,7 @@ if vim.g.neovide then
 
   -- animations
   vim.g.neovide_cursor_animation_length = 0 -- disable cursor animation
-  -- vim.g.neovide_scroll_animation_length = 0.3
+  vim.g.neovide_scroll_animation_length = 0.01
 
   -- Helper function for transparency formatting
   local alpha = function()
@@ -23,6 +23,10 @@ if vim.g.neovide then
   vim.g.neovide_confirm_quit = true
   -- vim.g.neovide_fullscreen = true
   vim.g.neovide_remember_window_size = true
+  vim.g.neovide_remember_window_position = true
+
+  -- disable special character inputed by alt+key
+  -- vim.g.neovide_input_macos_alt_is_meta = false
 end
 
 -- vim.t.is_transparent = 1
