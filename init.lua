@@ -40,9 +40,9 @@ return {
     pin_plugins = nil,
     --
     -- [Changelog related]
-    skip_prompts = false, -- skip promits about breaking changes
+    skip_prompts = false,  -- skip promits about breaking changes
     show_changelog = true, -- show the changelog after performing an update
-    auto_quit = false, -- automatically quit the current session after a successful update
+    auto_quit = false,     -- automatically quit the current session after a successful update
     -- [Nightly feature]
     branch = "nightly",
     commit = nil,
