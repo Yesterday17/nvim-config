@@ -4,6 +4,17 @@ if vim.g.neovide then
   vim.o.guifont = "JetBrains_Mono:h17"
   vim.g.neovide_scale_factor = 1
 
+  vim.g.neovide_ime_enabled = false
+  vim.g.neovide_ime_at_bottom = true
+  vim.api.nvim_create_autocmd("ModeChanged", {
+    pattern = "i*:*",
+    callback = function() vim.g.neovide_ime_enabled = false end,
+  })
+  vim.api.nvim_create_autocmd("ModeChanged", {
+    pattern = "*:i*",
+    callback = function() vim.g.neovide_ime_enabled = true end,
+  })
+
   -- animations
   vim.g.neovide_cursor_animation_length = 0 -- disable cursor animation
   vim.g.neovide_scroll_animation_length = 0.01
