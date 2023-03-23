@@ -12,6 +12,11 @@ maps.i["<ScrollWheelRight>"] = { "<nop>" }
 
 -- Save without format
 maps.n["<leader>W"] = { "<cmd>noautocmd w<cr>", desc = "Save without format" }
+-- Override `<leader>C`
+-- It was defined as "force close buffer" by AstroNvim, but it would be more useful to reopen the previous closed buffer.
+-- Force closing is not gentle, and it's not a common operation.
+-- However, accidentally close a buffer might be much common and deserves a shortcut.
+maps.n["<leader>C"] = { "<cmd>b#<cr>", desc = "Reopen previous closed buffer" }
 
 -- macOS settings
 if require("user.utils.platform").is_macos then
