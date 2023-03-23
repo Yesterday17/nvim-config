@@ -10,6 +10,9 @@ local maps = {
 maps.n["<ScrollWheelRight>"] = { "<nop>" }
 maps.i["<ScrollWheelRight>"] = { "<nop>" }
 
+-- Save without format
+maps.n["<leader>W"] = { "<cmd>noautocmd w<cr>", desc = "Save without format" }
+
 -- macOS settings
 if require("user.utils.platform").is_macos then
   -- Toggle terminal
