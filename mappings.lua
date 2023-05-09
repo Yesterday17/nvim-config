@@ -18,6 +18,10 @@ maps.n["<leader>W"] = { "<cmd>noautocmd w<cr>", desc = "Save without format" }
 -- However, accidentally close a buffer might be much common and deserves a shortcut.
 maps.n["<leader>C"] = { "<cmd>b#<cr>", desc = "Reopen previous closed buffer" }
 
+-- Second terminal
+maps.n["<leader>t1"] = { "<cmd>ToggleTerm 1<cr>", desc = "Toggle to the first terminal" }
+maps.n["<leader>t2"] = { "<cmd>ToggleTerm 2<cr>", desc = "Toggle to the second terminal" }
+
 -- macOS settings
 if require("user.utils.platform").is_macos then
   -- Toggle terminal

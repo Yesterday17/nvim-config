@@ -16,7 +16,7 @@ if vim.g.neovide then
   })
 
   -- animations
-  vim.g.neovide_cursor_animation_length = 0 -- disable cursor animation
+  -- vim.g.neovide_cursor_animation_length = 0 -- disable cursor animation
   vim.g.neovide_scroll_animation_length = 0.01
 
   if vim.t.is_transparent == 1 then
@@ -45,7 +45,7 @@ end
 
 return {
   updater = {
-    channel = "stable",
+    channel = "nightly",
     version = "latest",
     -- nil, true, false (nil will pin plugins on stable only)
     pin_plugins = nil,
