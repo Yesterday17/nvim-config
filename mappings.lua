@@ -1,3 +1,5 @@
+local platform = require "user.utils.platform"
+
 local maps = {
   i = {},
   n = {},
@@ -23,7 +25,7 @@ maps.n["<leader>t1"] = { "<cmd>ToggleTerm 1<cr>", desc = "Toggle to the first te
 maps.n["<leader>t2"] = { "<cmd>ToggleTerm 2<cr>", desc = "Toggle to the second terminal" }
 
 -- macOS settings
-if require("user.utils.platform").is_macos then
+if platform.is_macos or platform.is_remote then
   -- Toggle terminal
   maps.n["<D-'>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" }
   maps.t["<D-'>"] = maps.n["<D-'>"]

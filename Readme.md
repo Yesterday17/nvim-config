@@ -51,3 +51,9 @@ neovide --multigrid
 ```bash
 :LspInstall typescript
 ```
+
+## Terminal Emulators
+
+```bash
+brew tap homebrew/cask-fonts && brew install --cask font-jetbrains-mono-nerd-font
+```

@@ -3,6 +3,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.motion.hop-nvim" },
   { -- further customize the options set by the community
     "copilot.lua",
     opts = {
